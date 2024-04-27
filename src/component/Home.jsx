@@ -11,7 +11,7 @@ const Home = () => {
   const sendComplaint = async () => {
     try {
       // Make a POST request to the backend endpoint
-      await axios.post('http://localhost:3000/api/sendComplaint', {
+      await axios.post('https://complainbackend.onrender.com/api/sendComplaint', {
         email,
         title,
         description
