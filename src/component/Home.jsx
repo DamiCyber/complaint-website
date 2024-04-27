@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Import axios for making HTTP requests
+import Swal from 'sweetalert2';
 import "../assets/style/Home.css"
 import file from "../assets/images/file.png"
 
