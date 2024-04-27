@@ -23,11 +23,18 @@ const Home = () => {
       setDescription('');
 
       // Show a success message to the user
-      alert('Complaint sent successfully!');
+      Swal.fire({
+        title: "Complaint sent successfully!",
+        icon: "success"
+      });
     } catch (error) {
       console.error('Error sending complaint:', error);
       // Show an error message to the user
-      alert('Failed to send complaint. Please try again later.');
+      Swal.fire({
+        icon: "error",
+        title: "Failed to send complaint. Please try again later",
+        text: "Something went wrong!",
+      });
     }
   };
 
@@ -39,7 +46,7 @@ const Home = () => {
             <img src={file} alt="" />
             <h4>Public Complaint Registration</h4>
           </div>
-          <input type="text" placeholder='Email Address' value={email} onChange={(e) => setEmail(e.target.value)}/>
+          <input type="text" placeholder='Email Address' value={email} onChange={(e) => setEmail(e.target.value)} />
           <input type="text" placeholder='Complaint Title' value={title} onChange={(e) => setTitle(e.target.value)} />
           <textarea cols="40" rows="16" placeholder='Description' value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
           <button className='btn' onClick={sendComplaint}>Send</button>
