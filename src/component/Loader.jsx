@@ -14,11 +14,12 @@ const Loader = () => {
     }, []);
 
     if (loading) {
-        return <div>
-            <div class="loader">
-                <div class="wrapper">
-                    <div class="circle"></div>
-                </div>
+        return <div className='all'>
+            <h2 className='title' >OGBOMOSO</h2>
+            <div class="three-body">
+                <div class="three-body__dot"></div>
+                <div class="three-body__dot"></div>
+                <div class="three-body__dot"></div>
             </div>
 
         </div>;
