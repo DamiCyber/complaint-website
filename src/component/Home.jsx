@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Import axios for making HTTP requests
 import "../assets/style/Home.css"
-// import file from "../assets/images/file.png"
+import file from "../assets/images/file.png"
 
 const Home = () => {
   const [email, setEmail] = useState("");
@@ -36,7 +36,7 @@ const Home = () => {
       <div className="back">
         <div className="format">
           <div className="text">
-            {/* <img src={file} alt="" /> */}
+            <img src={file} alt="" />
             <h4>Public Complaint Registration</h4>
           </div>
           <input type="text" placeholder='Email Address' value={email} onChange={(e) => setEmail(e.target.value)}/>
