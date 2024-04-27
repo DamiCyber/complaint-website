@@ -10,7 +10,7 @@ const Loader = () => {
         setTimeout(() => {
             setLoading(false);
             navigate("/login")
-        }, 10000);
+        }, 6000);
     }, []);
 
     if (loading) {
